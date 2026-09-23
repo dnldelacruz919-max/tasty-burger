@@ -1,28 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Burger Shop</title>
+    <title>Tasty Burger</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- Navigation -->
     <header class="navbar">
-        <div class="logo">TASTY BURGER</div>
+
+        <div class="logo">
+            <span class="burger-logo">🍔</span>
+
+            <div>
+                <strong>TASTY</strong>
+                <strong class="logo-yellow">BURGER</strong>
+            </div>
+        </div>
 
         <nav>
-            <a href="#home">HOME</a>
             <a href="#about">ABOUT</a>
-            <a href="#menu">OUR MENU</a>
+            <a href="#menu" class="active">OUR MENU</a>
             <a href="#shop">SHOP</a>
             <a href="#contact">CONTACT</a>
         </nav>
 
         <div class="cart">
-            🛒 <span>0</span>
+            🛒
+            <span>0</span>
         </div>
+
     </header>
 
+
+    <!-- Our Crazy Burgers -->
+    <main id="menu">
+
+        <section class="menu-section">
+
+            <div class="menu-intro">
+
+                <h1>OUR CRAZY BURGERS</h1>
+
+                <p>
+                    Get ready for a wild ride of flavors! Our crazy burgers are
+                    loaded with juicy patties, bold toppings, and irresistible
+                    sauces, all stacked on a perfectly toasted bun. Whether you
+                    like it cheesy, or extra meaty, we've got a burger that will
+                    blow your mind!
+                </p>
+
+            </div>
+
+
+            <!-- Burger Cards -->
+            <div class="burger-grid">
+
+
+                <!-- Burger 1 -->
+                <article class="burger-card">
+
+                    <img
+                        src="images/crispy-chicken.png"
+                        alt="Crispy Chicken Burger"
+                    >
+
+                    <div class="rating-row">
+
+                        <div class="stars">
+
+                            <button type="button" class="star" data-rating="1">★</button>
+                            <button type="button" class="star" data-rating="2">★</button>
+                            <button type="button" class="star" data-rating="3">★</button>
+                            <button type="button" class="star" data-rating="4">★</button>
+                            <button type="button" class="star" data-rating="5">★</button>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="heart"
+                            aria-label="Add to favorites"
+                        >♡</button>
+
+                    </div>
+
+                    <h2>Crispy Chicken</h2>
+
+                    <p>
+                        Crispy fried chicken, fresh lettuce,
+                        and special sauce.
+                    </p>
+
+                    <div class="price">₱99.15</div>
+
+                </article>
+
+
+
+                <!-- Burger 2 -->
+                <article class="burger-card">
+
+                    <img
+                        src="images/ultimate-bacon.png"
+                        alt="Ultimate Bacon Burger"
+                    >
+
+                    <div class="rating-row">
+
+                        <div class="stars">
+
+                            <button type="button" class="star" data-rating="1">★</button>
+                            <button type="button" class="star" data-rating="2">★</button>
+                            <button type="button" class="star" data-rating="3">★</button>
+                            <button type="button" class="star" data-rating="4">★</button>
+                            <button type="button" class="star" data-rating="5">★</button>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="heart"
+                            aria-label="Add to favorites"
+                        >♡</button>
+
+                    </div>
+
+                    <h2>Ultimate Bacon</h2>
+
+                    <p>
+                        Juicy beef patty, crispy bacon,
+                        cheese, and special sauce.
+                    </p>
+
+                    <div class="price">₱99.32</div>
+
+                </article>
+
+
+
+                <!-- Burger 3 -->
+                <article class="burger-card">
+
+                    <img
+                        src="images/black-sheep.png"
+                        alt="Black Sheep Burger"
+                    >
+
+                    <div class="rating-row">
+
+                        <div class="stars">
+
+                            <button type="button" class="star" data-rating="1">★</button>
+                            <button type="button" class="star" data-rating="2">★</button>
+                            <button type="button" class="star" data-rating="3">★</button>
+                            <button type="button" class="star" data-rating="4">★</button>
+                            <button type="button" class="star" data-rating="5">★</button>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="heart"
+                            aria-label="Add to favorites"
+                        >♡</button>
+
+                    </div>
+
+                    <h2>Black Sheep</h2>
+
+                    <p>
+                        Beef patty, cheddar cheese,
+                        lettuce, tomato, and signature sauce.
+                    </p>
+
+                    <div class="price">₱69.15</div>
+
+                </article>
+
+
+
+                <!-- Burger 4 -->
+                <article class="burger-card">
+
+                    <img
+                        src="images/vegan-burger.png"
+                        alt="Vegan Burger"
+                    >
+
+                    <div class="rating-row">
+
+                        <div class="stars">
+
+                            <button type="button" class="star" data-rating="1">★</button>
+                            <button type="button" class="star" data-rating="2">★</button>
+                            <button type="button" class="star" data-rating="3">★</button>
+                            <button type="button" class="star" data-rating="4">★</button>
+                            <button type="button" class="star" data-rating="5">★</button>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="heart"
+                            aria-label="Add to favorites"
+                        >♡</button>
+
+                    </div>
+
+                    <h2>Vegan Burger</h2>
+
+                    <p>
+                        Plant-based patty, fresh veggies,
+                        and vegan sauce.
+                    </p>
+
+                    <div class="price">₱89.25</div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>

@@ -5,51 +5,312 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffefa;
+    color: #333;
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
 .navbar {
-    width: 100%;
-    height: 80px;
+    height: 100px;
+    padding: 0 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
     background: #ffffff;
     border-bottom: 1px solid #eeeeee;
 }
 
+
+/* LOGO */
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e91e63;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    line-height: 20px;
 }
+
+.burger-logo {
+    font-size: 45px;
+}
+
+.logo strong {
+    display: block;
+    color: #3b2618;
+}
+
+.logo-yellow {
+    color: #f5a900 !important;
+}
+
+
+/* NAVIGATION LINKS */
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 38px;
+    margin-left: auto;
+    margin-right: 35px;
 }
 
 nav a {
     text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 39px 0;
+}
+
+nav a:hover {
+    color: #f2a900;
+}
+
+nav a.active {
+    color: #f2a900;
+    border-bottom: 3px solid #f2a900;
+}
+
+
+/* CART */
+
+.cart {
+    position: relative;
+    font-size: 23px;
+}
+
+.cart span {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+
+    width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5a900;
+    color: white;
+
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   MENU SECTION
+========================= */
+
+.menu-section {
+    padding: 65px 7% 80px;
+}
+
+
+/* HEADING */
+
+.menu-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 65px;
+}
+
+.menu-intro h1 {
+    font-size: 52px;
+    color: #3b2618;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.menu-intro p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* =========================
+   BURGER CARDS
+========================= */
+
+.burger-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.burger-card {
+    min-width: 0;
+}
+
+.burger-card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+}
+
+
+/* =========================
+   STAR RATING
+========================= */
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    border: none;
+    background: transparent;
+    padding: 2px;
+    margin: 0;
+
+    color: #d6d6d6;
+    font-size: 19px;
+
+    cursor: pointer;
+}
+
+.star:hover {
+    color: #f4b000;
+}
+
+.star.selected {
+    color: #f4b000;
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart {
+    border: none;
+    background: transparent;
+
+    color: #777;
+
+    font-size: 30px;
+    line-height: 30px;
+
+    cursor: pointer;
+    padding: 5px;
+}
+
+.heart:hover {
+    color: #e53935;
+}
+
+.heart.liked {
+    color: red;
+}
+
+
+/* =========================
+   BURGER NAME
+========================= */
+
+.burger-card h2 {
+    font-size: 20px;
     color: #333;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.burger-card p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+
+    min-height: 48px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+    display: inline-block;
+
+    margin-top: 18px;
+    padding: 9px 17px;
+
+    background: #f5ad00;
+    color: #3b2618;
+
+    border-radius: 3px;
+
     font-size: 14px;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #e91e63;
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .burger-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        gap: 20px;
+    }
+
 }
 
-.cart {
-    font-size: 20px;
-}
 
-.cart span {
-    font-size: 12px;
-    background: #e91e63;
-    color: white;
-    padding: 3px 7px;
-    border-radius: 50%;
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    .menu-intro h1 {
+        font-size: 36px;
+    }
+
+    .burger-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
