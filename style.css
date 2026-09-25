@@ -31,22 +31,12 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 22px;
-    line-height: 20px;
 }
 
-.burger-logo {
-    font-size: 45px;
-}
-
-.logo strong {
+.logo img {
+    width: 150px;
+    height: auto;
     display: block;
-    color: #3b2618;
-}
-
-.logo-yellow {
-    color: #f5a900 !important;
 }
 
 
@@ -124,7 +114,7 @@ nav a.active {
 
 .menu-intro h1 {
     font-size: 52px;
-    color: #3b2618;
+    color: #d62828;
     letter-spacing: 1px;
     margin-bottom: 22px;
 }
